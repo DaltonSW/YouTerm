@@ -2,6 +2,7 @@ package main
 
 import (
 	"dalton.dog/YouTerm/API"
+	"dalton.dog/YouTerm/visuals"
 	// "errors"
 	"fmt"
 	// "os"
@@ -16,12 +17,12 @@ func check(e error) {
 }
 
 func main() {
-	fmt.Println("Hello, mom!")
-	apiKEY, err := API.GetKeyFromEnv()
-	check(err)
+	apiKEY, _ := API.GetKeyFromEnv()
+	// check(err)
 
 	fmt.Printf("Got the API Key: %s", apiKEY)
 
+	visuals.TestProgram()
 }
 
 func getAPIKey() (string, error) {
